@@ -5,9 +5,9 @@ import { RiShareForwardLine } from "react-icons/ri";
 
 const SummerCamp = () => {
     const images = [
-        {_id:1, imgUrl: ""},
-        {_id:2, imgUrl: ""},
-        {_id:3, imgUrl: ""}
+        {_id:1, imgUrl: "https://i.ibb.co/LnbNbS7/img1.jpg"},
+        {_id:2, imgUrl: "https://i.ibb.co/1vjLrNr/img2.jpg"},
+        {_id:3, imgUrl: "https://i.ibb.co/Jzb8vng/img3.jpg"}
     ]
     return (
         <div className='m-8'>
@@ -62,8 +62,30 @@ const SummerCamp = () => {
                         </div>
                     </div>
                 </div>
-                <div>
-                    <h1>Image</h1>
+                {/* <div className=' grid grid-cols-2 bg-slate-400'> 
+                    <div
+                    className='row-span-2 bg-green p-2'><img src={images[0].imgUrl} alt="" /></div>
+                    <div
+                    className='bg-green p-2'><img src={images[1].imgUrl} alt="" /></div>
+                    <div
+                    className='bg-green p-2'><img src={images[2].imgUrl} alt="" /></div>
+                </div> */}
+                <div className='flex md:mx-4 my-16 md:my-0'>
+                    <div style={{ width: "50%" }} className="mr-2"><img style={{
+                        height: "320px", width: "300px",
+                        borderTopLeftRadius: "10px",
+                        borderBottomLeftRadius:"10px"
+                    }} src={images[0].imgUrl} alt="" /></div>
+                    <div style={{width:"50%"}}>
+                        <div><img style={{
+                            height: "155px", width: "300px",
+                            borderTopRightRadius:"10px"
+                        }} src={images[1].imgUrl} alt="" /></div>
+                        <div className='mt-2'><img style={{
+                            height: "156px", width: "300px",
+                            borderBottomRightRadius:"10px"
+                        }} src={images[2].imgUrl} alt="" /></div>
+                    </div>
                 </div>
             </div>
         </div>
